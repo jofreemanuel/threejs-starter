@@ -1,3 +1,3 @@
 # Webpack Three.js starter + GSAP
 
-More info coming soon
+Based in default starter by Bruno Simon. More info coming soon.
