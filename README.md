@@ -1,2 +1,3 @@
-# threejs-starter
-Webpack Three.js starter + GSAP
+# Webpack Three.js starter + GSAP
+
+More info coming soon
