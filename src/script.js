@@ -3,6 +3,7 @@ import "./style.css";
 import { GUI } from "three/examples/jsm/libs/dat.gui.module.js";
 import Stats from "three/examples/jsm/libs/stats.module.js";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
+import gsap from "gsap";
 
 let camera, controls, renderer, scene, stats;
 
