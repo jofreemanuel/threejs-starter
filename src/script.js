@@ -64,29 +64,7 @@ function init() {
   window.addEventListener("resize", onWindowResize);
 
   // Fullscreen on double-click
-  window.addEventListener("dblclick", () => {
-    const isFullscreenEnabled =
-      document.fullscreenElement ||
-      document.webkitFullscreenElement;
-
-    if (isFullscreenEnabled) {
-      if (document.exitFullscreen) {
-        document.exitFullscreen();
-      }
-      // Safari & Chrome css prefix
-      if (document.webkitExitFullscreen) {
-        document.webkitExitFullscreen();
-      }
-    } else {
-      if (canvas.requestFullscreen) {
-        canvas.requestFullscreen();
-      }
-      // Safari & Chrome css prefix
-      if (canvas.webkitFullscreenElement) {
-        canvas.webkitFullscreenElement();
-      }
-    }
-  });
+  window.addEventListener("dblclick", dblclickToFullscreen);
 
   /*
   Dev tools
@@ -98,6 +76,30 @@ function init() {
 
   // Gui
   initGui();
+}
+
+function dblclickToFullscreen() {
+  const isFullscreenEnabled =
+    document.fullscreenElement ||
+    document.webkitFullscreenElement;
+
+  if (isFullscreenEnabled) {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    }
+    // Safari & Chrome css prefix
+    if (document.webkitExitFullscreen) {
+      document.webkitExitFullscreen();
+    }
+  } else {
+    if (canvas.requestFullscreen) {
+      canvas.requestFullscreen();
+    }
+    // Safari & Chrome css prefix
+    if (canvas.webkitFullscreenElement) {
+      canvas.webkitFullscreenElement();
+    }
+  }
 }
 
 function onWindowResize() {
