@@ -1,7 +1,7 @@
 <p align="center">
   <a href="https://threejs.org/">
   <h1 align="center">
-  Webpack Three.js starter 
+  Three.js starter 
 </h1>
   </a>
 </p>
@@ -35,7 +35,7 @@ Create a Three.js proyect with this boilerplate. This starter includes Webpack d
       ```shell
       npm run dev
       ```
-      Your site is now running. Check your terminal output to know exact url to access your site. It might look something similar to `http://192.168.0.198:8080/`
+      Your site is now running. Check your terminal output to know the url to access your site. It might look something similar to `http://192.168.0.198:8080/`
 
 1.  **Open the source code and start editing**
    
