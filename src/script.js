@@ -50,6 +50,7 @@ function init() {
 
   // Renderer
   renderer = new THREE.WebGLRenderer({
+    antialias: true,
     canvas: canvas,
   });
   renderer.setPixelRatio(window.devicePixelRatio);
