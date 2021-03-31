@@ -42,6 +42,7 @@ function init() {
   camera.position.set(5, 2, 8);
 
   // Camera controls
+  // Right click to move, scroll to zoom in/out, left click to rotate
   controls = new OrbitControls(camera, canvas);
   controls.enableDamping = true;
   controls.minDistance = 1;
