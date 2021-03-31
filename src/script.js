@@ -13,7 +13,7 @@ init();
 animate();
 
 function init() {
-  // Canvas
+  // Output html element
   const canvas = document.getElementById("webgl");
 
   // Scene
@@ -23,7 +23,7 @@ function init() {
   const axesHelper = new THREE.AxesHelper(3);
   scene.add(axesHelper);
 
-  // Cube
+  // Cube mesh
   const cube = new THREE.Mesh(
     new THREE.BoxGeometry(1, 1, 1),
     new THREE.MeshBasicMaterial({
@@ -41,7 +41,7 @@ function init() {
   );
   camera.position.set(5, 2, 8);
 
-  // Controls
+  // Camera controls
   controls = new OrbitControls(camera, canvas);
   controls.enableDamping = true;
   controls.minDistance = 1;
