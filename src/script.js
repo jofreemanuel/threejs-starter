@@ -7,14 +7,14 @@ import Stats from "three/examples/jsm/libs/stats.module.js";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import gsap from "gsap";
 
-let camera, controls, renderer, scene, stats;
+let camera, canvas, controls, renderer, scene, stats;
 
 init();
 animate();
 
 function init() {
   // Output html element
-  const canvas = document.getElementById("webgl");
+  canvas = document.getElementById("webgl");
 
   // Scene
   scene = new THREE.Scene();
