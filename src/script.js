@@ -59,8 +59,33 @@ function init() {
   renderer.outputEncoding = THREE.sRGBEncoding;
   renderer.render(scene, camera);
 
-  // Resize listener
+  // Window resize
   window.addEventListener("resize", onWindowResize);
+
+  // Fullscreen on double-click
+  window.addEventListener("dblclick", () => {
+    const isFullscreenEnabled =
+      document.fullscreenElement ||
+      document.webkitFullscreenElement;
+
+    if (isFullscreenEnabled) {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      }
+      // Safari & Chrome css prefix
+      if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen();
+      }
+    } else {
+      if (canvas.requestFullscreen) {
+        canvas.requestFullscreen();
+      }
+      // Safari & Chrome css prefix
+      if (canvas.webkitFullscreenElement) {
+        canvas.webkitFullscreenElement();
+      }
+    }
+  });
 
   /*
   Dev tools
@@ -107,5 +132,5 @@ function initGui() {
     "dash / gap": 1,
   };
 
-  // Initialize gui
+  // Initialize gui elements here
 }
