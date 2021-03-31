@@ -1,0 +1,142 @@
+/*** box sizing border-box for all elements ***/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-margin-before: 0;
+  margin-block-start: 0;
+  -webkit-margin-after: 0;
+  margin-block-end: 0;
+  outline: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+button {
+  background-color: transparent;
+  color: inherit;
+  border-width: 0;
+  padding: 0;
+  cursor: pointer;
+}
+figure {
+  margin: 0;
+}
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+ul,
+ol,
+li,
+dd {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+p {
+  margin-bottom: 0;
+}
+cite {
+  font-style: normal;
+}
+fieldset {
+  border-width: 0;
+  padding: 0;
+  margin: 0;
+}
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+body {
+  overflow-x: hidden;
+}
+
+/*** form reset ***/
+
+textarea,
+select,
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+  -webkit-box-sizing: border-box;
+
+  -moz-box-sizing: border-box;
+
+  box-sizing: border-box;
+
+  -webkit-background-clip: padding;
+
+  -moz-background-clip: padding;
+
+  background-clip: padding-box;
+
+  -webkit-border-radius: 0;
+
+  -moz-border-radius: 0;
+
+  -ms-border-radius: 0;
+
+  -o-border-radius: 0;
+
+  border-radius: 0;
+
+  -webkit-appearance: none;
+
+  background-color: #fff;
+
+  color: #000;
+
+  outline: 0;
+
+  margin: 0;
+
+  padding: 0;
+
+  text-align: left;
+
+  font-size: 1em;
+
+  height: 1em;
+
+  vertical-align: middle;
+}
+
+select,
+select,
+select {
+  background: #fff
+    url(data:image/png;base64,R0lGODlhDQAEAIAAAAAAAP8A/yH5BAEHAAEALAAAAAANAAQAAAILhA+hG5jMDpxvhgIAOw==);
+
+  background-repeat: no-repeat;
+
+  background-position: 97% center;
+
+  padding: 0 25px 0 8px;
+
+  font-size: 0.875em;
+}

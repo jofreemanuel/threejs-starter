@@ -1,5 +1,7 @@
 import * as THREE from "three";
-import "./style.css";
+import "./css/style.css";
+import "./css/normalize.css";
+import "./css/reset.css";
 import { GUI } from "three/examples/jsm/libs/dat.gui.module.js";
 import Stats from "three/examples/jsm/libs/stats.module.js";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
