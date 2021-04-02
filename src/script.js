@@ -2,7 +2,7 @@ import * as THREE from "three";
 import "./css/style.css";
 import "./css/normalize.css";
 import "./css/reset.css";
-import { GUI } from "three/examples/jsm/libs/dat.gui.module.js";
+import { GUI } from "dat.gui";
 import Stats from "three/examples/jsm/libs/stats.module.js";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import gsap from "gsap";
@@ -78,6 +78,16 @@ function init() {
   initGui();
 }
 
+function onWindowResize() {
+  // Update camera
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+
+  // Update renderer
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+}
+
 function dblclickToFullscreen() {
   const isFullscreenEnabled =
     document.fullscreenElement ||
@@ -100,16 +110,6 @@ function dblclickToFullscreen() {
       canvas.webkitFullscreenElement();
     }
   }
-}
-
-function onWindowResize() {
-  // Update camera
-  camera.aspect = window.innerWidth / window.innerHeight;
-  camera.updateProjectionMatrix();
-
-  // Update renderer
-  renderer.setSize(window.innerWidth, window.innerHeight);
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 }
 
 function animate() {
